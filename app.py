@@ -20,7 +20,6 @@ df['MINIMUM_PAYMENTS'].fillna(df['MINIMUM_PAYMENTS'].median(), inplace=True)
 df['CREDIT_LIMIT'].fillna(df['CREDIT_LIMIT'].mean(), inplace=True)
 
 df_no_na = df.copy()
-st.write(df_no_na.columns.tolist())
 
 df_no_na['CREDIT_LIMIT_PER_TENURE'] = df_no_na['CREDIT_LIMIT'] / df_no_na['TENURE']
 
@@ -87,9 +86,9 @@ purchases_frequency = st.number_input(
 
 oneoff_purchases_frequency = st.number_input(
     "One-off Purchases Frequency",
-    min_value=float(df_no_na["ONEOFFPURCHASESFREQUENCY"].min()),
-    max_value=float(df_no_na["ONEOFFPURCHASESFREQUENCY"].max()),
-    value=float(df_no_na["ONEOFFPURCHASESFREQUENCY"].median())
+    min_value=float(df_no_na["ONEOFF_PURCHASES_FREQUENCY"].min()),
+    max_value=float(df_no_na["ONEOFF_PURCHASES_FREQUENCY"].max()),
+    value=float(df_no_na["ONEOFF_PURCHASES_FREQUENCY"].median())
 )
 
 purchases_installments_frequency = st.number_input(
