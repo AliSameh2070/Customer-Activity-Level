@@ -20,6 +20,7 @@ df['MINIMUM_PAYMENTS'].fillna(df['MINIMUM_PAYMENTS'].median(), inplace=True)
 df['CREDIT_LIMIT'].fillna(df['CREDIT_LIMIT'].mean(), inplace=True)
 
 df_no_na = df.copy()
+st.write(df_no_na.columns.tolist())
 
 df_no_na['CREDIT_LIMIT_PER_TENURE'] = df_no_na['CREDIT_LIMIT'] / df_no_na['TENURE']
 
