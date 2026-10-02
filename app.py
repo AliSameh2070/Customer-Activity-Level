@@ -100,16 +100,16 @@ purchases_installments_frequency = st.number_input(
 
 cash_advance_frequency = st.number_input(
     "Cash Advance Frequency",
-    min_value=float(df_no_na["CASHADVANCEFREQUENCY"].min()),
-    max_value=float(df_no_na["CASHADVANCEFREQUENCY"].max()),
-    value=float(df_no_na["CASHADVANCEFREQUENCY"].median())
+    min_value=float(df_no_na["CASH_ADVANCE_FREQUENCY"].min()),
+    max_value=float(df_no_na["CASH_ADVANCE_FREQUENCY"].max()),
+    value=float(df_no_na["CASH_ADVANCE_FREQUENCY"].median())
 )
 
 cash_advance_trx = st.number_input(
     "Cash Advance Transactions",
-    min_value=float(df_no_na["CASHADVANCETRX"].min()),
-    max_value=float(df_no_na["CASHADVANCETRX"].max()),
-    value=float(df_no_na["CASHADVANCETRX"].median())
+    min_value=float(df_no_na["CASH_ADVANCE_TRX"].min()),
+    max_value=float(df_no_na["CASH_ADVANCE_TRX"].max()),
+    value=float(df_no_na["CASH_ADVANCE_TRX"].median())
 )
 
 purchases_trx = st.number_input(
