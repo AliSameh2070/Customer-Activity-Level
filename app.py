@@ -195,6 +195,7 @@ if st.button("Submit", use_container_width=True):
     cluster_data = df_clustered[df_clustered["Cluster"] == cluster]
 
     cluster_size = len(cluster_data)
+    cluster_percentage = cluster_size / len(df_clustered) * 100
 
     if cluster == 0:
         st.success("Customer Activity Level: High Activity")
