@@ -164,10 +164,10 @@ if st.button("Submit", use_container_width=True):
         "INSTALLMENTS_PURCHASES": [installments_purchases],
         "CASH_ADVANCE": [cash_advance],
         "PURCHASES_FREQUENCY": [purchases_frequency],
-        "ONEOFFPURCHASESFREQUENCY": [oneoff_purchases_frequency],
+        "ONEOFF_PURCHASES_FREQUENCY": [oneoff_purchases_frequency],
         "PURCHASES_INSTALLMENTS_FREQUENCY": [purchases_installments_frequency],
-        "CASHADVANCEFREQUENCY": [cash_advance_frequency],
-        "CASHADVANCETRX": [cash_advance_trx],
+        "CASH_ADVANCE_FREQUENCY": [cash_advance_frequency],
+        "CASH_ADVANCE_TRX": [cash_advance_trx],
         "PURCHASES_TRX": [purchases_trx],
         "CREDIT_LIMIT": [credit_limit],
         "PAYMENTS": [payments],
@@ -201,8 +201,6 @@ if st.button("Submit", use_container_width=True):
         st.success("Customer Activity Level: High Activity")
     else:
         st.info("Customer Activity Level: Low Activity")
-
-    cluster_percentage = cluster_size / len(df_clustered) * 100
 
     st.write("Customers in this activity group:", cluster_size)
     st.write("Percentage of customers:", f"{cluster_percentage:.2f}%")
