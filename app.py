@@ -190,18 +190,18 @@ if st.button("Submit", use_container_width=True):
 
     input_data = input_data[X.columns]
 
-cluster = model.predict(input_data)[0]
+    cluster = model.predict(input_data)[0]
 
-cluster_data = df_clustered[df_clustered["Cluster"] == cluster]
+    cluster_data = df_clustered[df_clustered["Cluster"] == cluster]
 
-cluster_size = len(cluster_data)
+    cluster_size = len(cluster_data)
 
-if cluster == 0:
-    st.success("Customer Activity Level: High Activity")
-else:
-    st.info("Customer Activity Level: Low Activity")
+    if cluster == 0:
+        st.success("Customer Activity Level: High Activity")
+    else:
+        st.info("Customer Activity Level: Low Activity")
 
-cluster_percentage = cluster_size / len(df_clustered) * 100
+    cluster_percentage = cluster_size / len(df_clustered) * 100
 
-st.write("Customers in this activity group:", cluster_size)
-st.write("Percentage of customers:", f"{cluster_percentage:.2f}%")
+    st.write("Customers in this activity group:", cluster_size)
+    st.write("Percentage of customers:", f"{cluster_percentage:.2f}%")
