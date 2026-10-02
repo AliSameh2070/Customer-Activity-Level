@@ -10,7 +10,7 @@ st.set_page_config(
     layout="centered"
 )
 
-with open("KMeans3.pkl", "rb") as file:
+with open("KMeans3_model.pkl", "rb") as file:
     model = pkl.load(file)
 
 df = pd.read_csv("CC GENERAL.csv")
